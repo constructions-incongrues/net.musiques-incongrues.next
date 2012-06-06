@@ -1,3 +1,9 @@
+# composer
+/src/composer.lock
+/src/composer.phar
+/src/autoload.php
+/src/vendor/
+
 # dist
 /src/.htaccess
 /src/forum/conf/database.php
