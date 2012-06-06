@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="my.project" default="help" basedir=".">
+<project name="net.musiques-incongrues.next" default="help" basedir=".">
 	<import file="vendor/ananas-build-toolkit/ant/toolkit.xml" />
 
 	<!-- This task can be used to override default profile loading behavior -->

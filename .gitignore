@@ -4,7 +4,8 @@
 /src/forum/conf/settings.php
 
 # review
-/build/
+/build
+/src/build
 
 # editors
 *~
