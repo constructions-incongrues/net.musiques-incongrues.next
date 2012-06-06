@@ -1,3 +1,6 @@
+# caches
+/src/forum/cache
+
 # composer
 /src/composer.lock
 /src/composer.phar
@@ -9,11 +12,12 @@
 /src/forum/conf/database.php
 /src/forum/conf/settings.php
 
-# review
-/build
-/src/build
-
 # editors
 *~
 *.bak
 *.swp
+
+# review
+/build
+/src/build
+

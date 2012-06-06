@@ -1,5 +1,5 @@
 <?php
-// Application Settings
+// Native Settings
 $Configuration['SETUP_TEST'] = '1';
 $Configuration['APPLICATION_PATH'] = '@forum.path.root@/';
 $Configuration['DATABASE_PATH'] = '@forum.path.root@/conf/database.php';
@@ -11,7 +11,7 @@ $Configuration['DEFAULT_STYLE'] = '@forum.uri.root@/themes/vanilla modern/styles
 $Configuration['WEB_ROOT'] = '@forum.uri.root@/';
 $Configuration['BASE_URL'] = '@forum.url.root@/';
 $Configuration['HTTP_METHOD'] = 'http';
-$Configuration['FORWARD_VALIDATED_USER_URL'] = '@forum.url.root@/discussions';
+$Configuration['FORWARD_VALIDATED_USER_URL'] = '@forum.url.root@/';
 $Configuration['SUPPORT_EMAIL'] = 'bertier@constructions-incongrues.net';
 $Configuration['SUPPORT_NAME'] = 'Constructions Incongrues';
 $Configuration['APPLICATION_TITLE'] = 'Musiques Incongrues';
@@ -24,3 +24,6 @@ $Configuration['WHISPERFI_AUTO_ALL'] = '0';
 $Configuration['WHISPERFI_INSTALL_COMPLETE'] = '1';
 $Configuration['ADDON_NOTICE'] = '0';
 $Configuration['LAST_UPDATE'] = '1338996454';
+
+// Custom Settings
+$Configuration['TWIG_DEBUG'] = @twig.debug@;
