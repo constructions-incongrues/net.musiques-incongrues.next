@@ -1,0 +1,12 @@
+<?php
+/**
+ * Lussumo forum configuration
+ */
+
+// Database Configuration Settings
+$Configuration['DATABASE_HOST'] = 'localhost';
+$Configuration['DATABASE_NAME'] = 'ci_net_musiquesincongrues_www';
+$Configuration['DATABASE_USER'] = 'root';
+$Configuration['DATABASE_PASSWORD'] = '';
+$Configuration['DATABASE_CHARACTER_ENCODING'] = 'latin1';
+$DatabaseTables['User'] = 'LUM_User';

@@ -1,0 +1,2 @@
+# PHP runtime configuration
+php_value display_errors "@php.display_errors@"
