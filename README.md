@@ -1,5 +1,3 @@
-# net.musiques-incongrues.next
-
 ## INSTALLATION
 
 * Créer un profil de configuration dédié :
