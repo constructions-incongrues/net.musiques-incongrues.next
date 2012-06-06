@@ -11,6 +11,7 @@ if (!defined('IN_VANILLA')) {
 include($Configuration['EXTENSIONS_PATH']."DiscussionPages/default.php");
 include($Configuration['EXTENSIONS_PATH']."NewApplicants/default.php");
 include($Configuration['EXTENSIONS_PATH']."Whisperfi/default.php");
+include($Configuration['EXTENSIONS_PATH']."FriendlyUrls/default.php");
 
 // Custom extensions
 include($Configuration['EXTENSIONS_PATH']."CiTwigBridge/default.php");
