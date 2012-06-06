@@ -13,16 +13,17 @@
  * It makes it possible to use theme's .php files as controllers and corresponding
  * templates files in theme's views/ directory as views. 
  *
- * @example <php>echo CiTwigBridgeRender($this->Context, __FILE__);</php>
+ * @example <php>echo CiTwigBridgeRender($this->Context, $this, __FILE__);</php>
  * @see http://twig.sensiolabs.org/doc/intro.html#basic-api-usage
  * 
- * @param Context $context       Current context
- * @param string  $pathThemeFile Current theme file filepath
- * @param array   $vars          Template variables
+ * @param Context    $context       Current context
+ * @param Delegation $delegation    Delegator instance
+ * @param string     $pathThemeFile Current theme file filepath
+ * @param array      $vars          Template variables
  * 
  * @return string Rendered template
  */
-function ciTwigBridgeRender(Context $context, $pathThemeFile, array $vars = array())
+function ciTwigBridgeRender(Context $context, Delegation $delegation, $pathThemeFile, array $vars = array())
 {
     // Setup autoloading
     require $context->Configuration['APPLICATION_PATH'].'/../vendor/autoload.php';
@@ -37,8 +38,14 @@ function ciTwigBridgeRender(Context $context, $pathThemeFile, array $vars = arra
     ));
 
     // Add default vars
-    if (!isset($vars['context'])) {
-        $vars['context'] = $context;
+    // TODO : factorise this using array merging
+    if (!isset($vars['vanilla']['context'])) {
+        $vars['vanilla']['context'] = $context;
+    }
+    if (!isset($vars['vanilla']['delegation'])) {
+        $vars['vanilla']['delegation'] = $delegation;   
+    }
+    if (!isset($vars['php']['server'])) {
         $vars['php'] = array('server' => $_SERVER);
     }
 

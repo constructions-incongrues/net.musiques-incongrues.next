@@ -4,4 +4,4 @@
  */
 
 // Render template
-echo CiTwigBridgeRender($this->Context, __FILE__);
+echo CiTwigBridgeRender($this->Context, $this, __FILE__);

@@ -1,16 +1,18 @@
+{{ vanilla.delegation.CallDelegate('PreHeadRender') }}
 <div id="Header">
     <div id="Session">
-{% if context.Session.UserID > 0 %}
-        Vous êtes connecté en tant que {{ context.Session.User.Name }}
-        (<a href="{{ context.Configuration.SIGNOUT_URL }}&amp;FormPostBackKey={{ context.Session.GetCsrfValidationKey() }}">Se déconnecter</a>)
+{% if vanilla.context.Session.UserID > 0 %}
+        Vous êtes connecté en tant que {{ vanilla.context.Session.User.Name }}
+        (<a href="{{ vanilla.context.Configuration.SIGNOUT_URL }}&amp;FormPostBackKey={{ vanilla.context.Session.GetCsrfValidationKey() }}">Se déconnecter</a>)
 {% else %}
         Vous n'êtes pas connecté
-        (<a href="{{ context.Configuration.SIGNIN_URL }}">Se connecter</a> ou <a href="{{ context.Configuration.REGISTRATION_URL }}&amp;ReturnUrl={{ php.server.REQUEST_URI }}">s'enregistrer sur le forum</a>)
+        (<a href="{{ vanilla.context.Configuration.SIGNIN_URL }}">Se connecter</a> ou <a href="{{ vanilla.context.Configuration.REGISTRATION_URL }}&amp;ReturnUrl={{ php.server.REQUEST_URI }}">s'enregistrer sur le forum</a>)
 {% endif %}
     </div><!-- /#Session -->
 
     <a name="pgtop"></a>
-    <h1>{{ context.Configuration.BANNER_TITLE }}</h1>
+    <h1>{{ vanilla.context.Configuration.BANNER_TITLE }}</h1>
 </div><!-- /#Header -->
 
+{{ vanilla.delegation.CallDelegate('PreBodyRender') }}
 <div id="Body">
