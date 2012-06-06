@@ -1,7 +1,10 @@
 # dist
-src/.htaccess
-src/forum/conf/database.php
-src/forum/conf/settings.php
+/src/.htaccess
+/src/forum/conf/database.php
+/src/forum/conf/settings.php
+
+# review
+/build/
 
 # editors
 *~
